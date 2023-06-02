@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  next-app:
+    build: 
+      context: .
+      dockerfile: ./docker-files/app.Dockerfile
+      args:
+        UID: ${UID}
+        GID: ${GID}
+    ports:
+      - '3000:3000'
+    container_name: next-app
+    volumes:
+      - ./local/:/app/
