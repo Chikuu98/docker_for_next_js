@@ -1,1 +1,0 @@
-# docker_for_next_js
